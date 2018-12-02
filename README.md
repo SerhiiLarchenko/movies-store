@@ -28,6 +28,7 @@ Simple single-page application
 #### Requirements
 - Node.js
 - npm
+- Webpack v4.19.1
 
 #### Run
 - In project folder install node packages:
@@ -38,3 +39,12 @@ Simple single-page application
 - Open new terminal tab and start react app:
   `npm start`
   * The app will start automatically in browser on `http://localhost:3000`
+
+## Attention! 
+
+Currently, create-react-app is using Webpack v4.19.1. If you have the newest version, please install the required version in your home directory:
+- open terminal
+- execute the following command to make sure you are located at home directory:
+  `cd ~`
+- install required Webpack version:
+ `npm i --save-dev webpack@4.19.1`
