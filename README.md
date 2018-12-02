@@ -1,6 +1,10 @@
 ## Movies Store
 
+<<<<<<< HEAD
 ![shop](https://github.com/SerhiiLarchenko/movies-store/blob/master/readme_files/movies.png)
+=======
+![shop](https://github.com/SerhiiLarchenko/movies-store/blob/master/readme_files/printscreen.png)
+>>>>>>> 48a9ff616aacdb574709710dc3dee5628d9b34a5
 
 Simple single-page application
 
