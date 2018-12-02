@@ -11,7 +11,9 @@ Simple single-page application
 - Sort by title, year and format
 - Shuffle movies
 - Search by title and actors
+- Input validation
 - Import data from txt file
+- Adaptive and responsive design for desktop, tablet, mobile
 
 #### Using
 - React.js
