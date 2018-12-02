@@ -1,6 +1,6 @@
 ## Movies Store
 
-![shop](https://github.com/SerhiiLarchenko/movies-store/blob/master/readme_files/printscreen.jpeg)
+![shop](https://github.com/SerhiiLarchenko/movies-store/blob/master/readme_files/printscreen.png)
 
 Simple single-page application
 
