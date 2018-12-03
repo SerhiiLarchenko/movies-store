@@ -11,11 +11,12 @@ class CartCard extends Component {
 
   render() {
     const { title } = this.props;
+    const imgTitle = title.replace(/\W/g,'_');
 
     return (
       <div className='wide-card'>
         <img className='wide-card__image' 
-          src={require(`../static/movies/${title}.jpg`)}  
+          src={require(`../static/movies/${imgTitle}.jpg`)}
           alt='movie poster'/>
         <div className='wide-card__title'>{ title }</div>
         <button className='wide-card__btn btn btn-sm btn-light'

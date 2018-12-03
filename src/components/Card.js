@@ -13,12 +13,13 @@ class Card extends PureComponent {
   render() {
     const {title, year, actors, format} = this.props;
     const stars = actors.join(', ');
+    const imgTitle = title.replace(/\W/g,'_');
     
     return (
       <div className='col-sm-6 col-md-4 col-lg-3 mb-3'>
         <div className='card h-100 text-center'>
           <img className='card-image-top w-100' 
-            src={require(`../static/movies/${title}.jpg`)} 
+            src={require(`../static/movies/${imgTitle}.jpg`)}
             alt='movie poster'/>
            <div className='card-body bg-light d-flex flex-column justify-content-between'>
               <div>
