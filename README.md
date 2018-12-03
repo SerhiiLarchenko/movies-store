@@ -29,12 +29,13 @@ Simple single-page application
 - Node.js
 - npm
 - Webpack v4.19.1
+- Chrome or Firefox
 
 #### Run
 - In project folder install node packages:
   `npm install`
 - Run the API server:
-  `npm run api/server`
+  `node api/server`
   * Server will be running on  `http://localhost:8000`
 - Open new terminal tab and start react app:
   `npm start`
