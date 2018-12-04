@@ -4,7 +4,8 @@ import { LOAD_MOVIES,
          SHUFFLE, 
          SORT_BY_TITLE, 
          SORT_BY_YEAR, 
-         SORT_BY_FORMAT } from './types';
+         SORT_BY_FORMAT,
+         LOAD_LOCAL_FILE } from './types';
 
 const API = 'http://localhost:8000/movies'
 
@@ -17,6 +18,9 @@ export const loadMovies = cb => dispatch => {
   }).then(() => { if (cb) cb({loaded: true });
   }).catch( error => console.log(error));
 }
+
+export const loadLocalFile = movies => dispatch => 
+  dispatch({type: LOAD_LOCAL_FILE, movies});
 
 export const sortByTitles = movies => dispatch => 
   dispatch({type: SORT_BY_TITLE, movies});

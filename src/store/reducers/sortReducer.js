@@ -2,13 +2,17 @@ import { LOAD_MOVIES,
          SHUFFLE,
          SORT_BY_TITLE, 
          SORT_BY_YEAR, 
-         SORT_BY_FORMAT } from '../actions/types';
+         SORT_BY_FORMAT, 
+         LOAD_LOCAL_FILE} from '../actions/types';
 
 const initState = [];
 
 export default function (state = initState, action) {
    switch (action.type) {
     case LOAD_MOVIES:
+      return action.movies;
+
+    case LOAD_LOCAL_FILE:  
       return action.movies;
 
     case SHUFFLE:
