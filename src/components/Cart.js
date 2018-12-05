@@ -37,7 +37,7 @@ class Cart extends Component {
       
     return (
       <div className={cartClass}>
-        <h2 className='text-light'>My movies</h2>
+        <h2 className='text-light'>Cart</h2>
         <div className={btnClass}
           onClick={this.toggleCart} >
           <div></div><div></div><div></div>

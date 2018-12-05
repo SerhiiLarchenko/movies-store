@@ -91,6 +91,32 @@ select {
 }
 
 /*----------------
+      ALERT
+-----------------*/
+
+.alert {
+	position: fixed;
+	z-index: 30;
+}
+
+/*----------------
+		MOVIE FORM
+-----------------*/
+
+.movie-form {
+	background:	#f8f9fa;
+	position: fixed;
+	padding: 10px;
+	width: 400px;
+	height: 300px;
+	top: 85px;
+	left: 5px;
+	z-index: 20;
+	border: 1px solid #343a40;
+	border-radius: 5px;
+}
+
+/*----------------
 			LOADER
 -----------------*/
 

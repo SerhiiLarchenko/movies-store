@@ -1,4 +1,6 @@
-import { LOAD_MOVIES, 
+import { ADD_MOVIE,
+         DELETE,
+         LOAD_MOVIES, 
          SHUFFLE,
          SORT_BY_TITLE, 
          SORT_BY_YEAR, 
@@ -15,9 +17,16 @@ export default function (state = initState, action) {
     case LOAD_LOCAL_FILE:  
       return action.movies;
 
+    case ADD_MOVIE:
+      return [...state, action.movie];
+    
+    case DELETE:
+      return state.filter(movie => 
+        action.id !== movie.id);
+
     case SHUFFLE:
       return function(array) {
-        let i = array.length - 1;
+        let i = array.length;
         while(i --> 0) {
           const j = Math.floor(Math.random()*(i+1));
           [array[i], array[j]] = [array[j], array[i]];

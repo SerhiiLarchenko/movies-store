@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-import { LOAD_MOVIES,
+import { ADD_MOVIE,
+         DELETE,
+         LOAD_MOVIES,
          SHUFFLE, 
          SORT_BY_TITLE, 
          SORT_BY_YEAR, 
@@ -31,5 +33,11 @@ export const sortByYear = movies => dispatch =>
 export const sortByFormat = movies => dispatch =>
   dispatch({type: SORT_BY_FORMAT, movies});
 
-  export const shuffle = movies => dispatch => 
+export const shuffle = movies => dispatch => 
   dispatch({type: SHUFFLE, movies});
+
+export const addMovie = movie => dispatch => 
+  dispatch({type: ADD_MOVIE, movie});
+
+export const deleteMovie = id => dispatch => 
+  dispatch({type: DELETE, id});

@@ -3,16 +3,18 @@ import React from 'react';
 import Search from './Search';
 import Sort from './Sort';
 import AddFile from './AddFile';
+import AddMovie from './AddMovie';
 
 const Panel = () => {
   return (
     <div className='container'>
-      <div className='row'>
-        <Sort />
-        <Search />
+      <div className='row justify-content-center'>
+        <AddMovie />
+        <AddFile />
       </div>
       <div className="row">
-        <AddFile />
+        <Sort />
+        <Search />
       </div>
     </div>
   )

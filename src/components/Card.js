@@ -1,7 +1,11 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
+import { deleteMovie } from '../store/actions/sortActions';
 import { addToCart } from '../store/actions/cartActions';
+
+const API = 'http://localhost:8000/deletemovie';
 
 class Card extends PureComponent {
 
@@ -10,10 +14,23 @@ class Card extends PureComponent {
     this.props.addToCart({ title,year,actors,format,id });
   }
 
+  deleteMovie = () => {
+    this.props.deleteMovie(this.props.id);
+    axios.delete(API, {data: {id: this.props.id}})
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
+  }
+
   render() {
     const {title, year, actors, format} = this.props;
     const stars = actors.join(', ');
-    const imgTitle = title.replace(/\W/g,'_');
+
+    let imgTitle = title.replace(/\W/g,'_');
+    try {
+      require(`../static/movies/${imgTitle}.jpg`)
+    } catch(e) {
+      imgTitle = 'movie';
+    }
     
     return (
       <div className='col-sm-6 col-md-4 col-lg-3 mb-3'>
@@ -27,10 +44,14 @@ class Card extends PureComponent {
                 <p className='card-text'>{ year }</p>
                 <p className='card-text'>{ stars }</p>
               </div>
-              <div className='mt-2'>
-              <button className='btn btn-primary'
+              <div className='mt-2 d-flex flex-column'>
+              <button className='btn btn-primary mb-1'
                 onClick={this.addToCart}> 
-                Add to list
+                Add to cart
+              </button>
+              <button className='btn btn-danger'
+                onClick={this.deleteMovie}>
+                Delete
               </button>
               </div>
           </div>
@@ -43,4 +64,4 @@ class Card extends PureComponent {
   }
 }
 
-export default connect(null, { addToCart })(Card);
+export default connect(null, { addToCart, deleteMovie })(Card);

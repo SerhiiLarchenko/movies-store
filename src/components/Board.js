@@ -47,7 +47,7 @@ class Board extends Component {
       return (
         <Card
           title={movie.title} 
-          year={movie['release Year']}
+          year={movie['release year']}
           actors={movie.stars}
           format={movie.format}
           key={movie.id}

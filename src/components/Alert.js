@@ -14,7 +14,7 @@ class Alert extends Component {
 
     return (
       msg ? <div className='alert alert-danger'
-        style={{left: x+'px', top: y+'px', position: 'fixed'}}>
+        style={{left: x+'px', top: y+'px'}}>
         {msg}
         <div className='text-center'>
         <button className='btn btn-light'
